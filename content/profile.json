@@ -1,0 +1,26 @@
+{
+  "name": "Aditya Singh",
+  "role": "Software Engineer, Backend & AI/ML",
+  "location": "Delhi, India",
+  "intro": "I build backend systems and the ML that runs on them: event-driven APIs, real-time pipelines, and models that ship behind a service instead of staying in a notebook.",
+  "status": "Available now",
+  "email": "itzadityasingh2104@gmail.com",
+  "phone": "",
+  "resume": "",
+  "photo": "",
+  "facts": [
+    { "label": "NSUT Delhi", "value": "B.Tech ECE (AI/ML), 2027" },
+    { "label": "8.38 CGPA", "value": "No backlogs" },
+    { "label": "Available now", "value": "Relocate anywhere in India" }
+  ],
+  "about": [
+    "I'm a final-year B.Tech student in Electronics and Communication Engineering, specialising in AI/ML, at Netaji Subhas University of Technology, Delhi.",
+    "Most of my work sits where backend engineering meets machine learning: event-driven pipelines, real-time APIs over WebSockets, auth that holds up with many users, and models that are deployed behind a service rather than left in a notebook.",
+    "Outside the code I run the tech side of DevComm, NSUT's developer community, and organise events for a few college societies."
+  ],
+  "open_to": "Software Engineer, Backend, Full-stack and AI/ML roles. Delhi NCR, Bengaluru, Hyderabad, Pune, Mumbai, Chennai or remote.",
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/adityasingh210" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/2104adityasingh/" }
+  ]
+}

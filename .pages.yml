@@ -1,0 +1,244 @@
+# Pages CMS config — https://pagescms.org/docs
+# Every file in /content shows up as a menu item in the CMS.
+# Text limits below keep long entries from breaking the layout.
+
+media:
+  input: public/media
+  output: /media
+  rename: safe
+  categories: [image, document]
+
+components:
+  label_value:
+    type: object
+    fields:
+      - name: label
+        type: string
+        required: true
+        options: { maxlength: 24 }
+      - name: value
+        type: string
+        required: true
+        options: { maxlength: 40 }
+
+content:
+  # ── Profile ───────────────────────────────────────────────
+  - name: profile
+    label: Profile & hero
+    type: file
+    path: content/profile.json
+    format: json
+    fields:
+      - name: name
+        type: string
+        required: true
+        options: { maxlength: 28 }
+      - name: role
+        label: Title under your name
+        type: string
+        options: { maxlength: 48 }
+      - name: location
+        type: string
+        options: { maxlength: 40 }
+      - name: intro
+        label: Hero intro
+        description: 1–2 sentences. Keep it about what you build, not a list of projects.
+        type: text
+        options: { maxlength: 220 }
+      - name: email
+        type: string
+      - name: phone
+        description: Leave empty to hide.
+        type: string
+      - name: resume
+        label: Résumé (PDF)
+        description: Leave empty to hide the button.
+        type: file
+      - name: photo
+        description: Optional. Square photos look best. Shown in About.
+        type: image
+      - name: facts
+        label: Quick facts under the hero
+        description: Up to 4. Bold line + small line.
+        component: label_value
+        list: { max: 4 }
+      - name: about
+        label: About paragraphs
+        type: text
+        list: { max: 4 }
+        options: { maxlength: 400 }
+      - name: open_to
+        label: Open to (shown in Contact)
+        type: text
+        options: { maxlength: 200 }
+      - name: links
+        label: Social links
+        type: object
+        list: { max: 6 }
+        fields:
+          - name: label
+            type: string
+            options: { maxlength: 20 }
+          - name: url
+            type: string
+
+  # ── Projects ──────────────────────────────────────────────
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        type: string
+        required: true
+        options: { maxlength: 32 }
+      - name: category
+        label: Small label (e.g. "AI photo platform", "SIH 2026")
+        type: string
+        options: { maxlength: 32 }
+      - name: summary
+        label: One-line summary
+        type: text
+        required: true
+        options: { maxlength: 170 }
+      - name: image
+        label: Screenshot / cover
+        description: Any size — it's cropped to 16:10. Leave empty for a clean placeholder.
+        type: image
+      - name: tint
+        label: Card colour
+        description: Used behind the image or as the placeholder.
+        type: select
+        options:
+          values: [sand, slate, mint, lilac, peach, stone]
+      - name: featured
+        label: Show full width
+        description: Use for your best project, or to even out an odd number of cards.
+        type: boolean
+      - name: stack
+        label: Tech stack
+        type: string
+        list: { max: 10 }
+        options: { maxlength: 22 }
+      - name: highlights
+        label: Bullet points (shown on "Show details")
+        type: text
+        list: { max: 6 }
+        options: { maxlength: 220 }
+      - name: metrics
+        label: Big numbers (optional)
+        description: Up to 3, e.g. 1.40°C / RMSE.
+        type: object
+        list: { max: 3 }
+        fields:
+          - name: value
+            type: string
+            options: { maxlength: 10 }
+          - name: label
+            type: string
+            options: { maxlength: 18 }
+      - name: links
+        type: object
+        list: { max: 3 }
+        fields:
+          - name: label
+            description: e.g. "View code", "Open live app"
+            type: string
+            options: { maxlength: 18 }
+          - name: url
+            type: string
+
+  # ── Skills ────────────────────────────────────────────────
+  - name: skills
+    label: Skills
+    type: file
+    path: content/skills.json
+    format: json
+    list: true
+    fields:
+      - name: group
+        type: string
+        required: true
+        options: { maxlength: 20 }
+      - name: items
+        type: string
+        list: true
+        options: { maxlength: 28 }
+
+  # ── Coding profiles ───────────────────────────────────────
+  - name: coding
+    label: Coding profiles (Codeforces, LeetCode…)
+    description: Section stays hidden on the site until at least one handle is filled.
+    type: file
+    path: content/coding.json
+    format: json
+    list: true
+    fields:
+      - name: platform
+        type: string
+        required: true
+        options: { maxlength: 20 }
+      - name: handle
+        type: string
+        options: { maxlength: 30 }
+      - name: url
+        type: string
+      - name: stats
+        description: e.g. Rating / 1216, Max rank / Pupil
+        component: label_value
+        list: { max: 4 }
+
+  # ── List sections (Education, Leadership, anything new) ───
+  - name: sections
+    label: Sections (Education, Leadership, add your own)
+    description: Add an entry here to create a brand-new section on the page. Order here = order on the site.
+    type: file
+    path: content/sections.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Section heading
+        type: string
+        required: true
+        options: { maxlength: 28 }
+      - name: intro
+        label: One-line intro (optional)
+        type: string
+        options: { maxlength: 90 }
+      - name: show
+        label: Show on site
+        type: boolean
+        default: true
+      - name: in_nav
+        label: Add to top menu
+        type: boolean
+      - name: items
+        type: object
+        list: true
+        fields:
+          - name: period
+            label: Left column (year, "Current", "NPTEL"…)
+            type: string
+            options: { maxlength: 18 }
+          - name: title
+            type: string
+            required: true
+            options: { maxlength: 90 }
+          - name: subtitle
+            label: Organisation / place
+            type: string
+            options: { maxlength: 80 }
+          - name: note
+            label: Extra line (optional)
+            type: text
+            options: { maxlength: 240 }
+          - name: details
+            label: Right-side values (CGPA, score…)
+            component: label_value
+            list: { max: 3 }
+          - name: link
+            label: Link (optional)
+            type: string

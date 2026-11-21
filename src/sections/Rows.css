@@ -1,0 +1,115 @@
+/* Shared row layout for Skills and every list section. */
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rows__item {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr) auto;
+  gap: 0.3rem 2rem;
+  padding-block: 1.3rem;
+  border-top: 1px solid var(--line);
+}
+.rows__item:first-child {
+  border-top: 0;
+  padding-top: 0.4rem;
+}
+
+.rows__left {
+  margin: 0;
+  padding-top: 0.2rem;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.rows__main {
+  margin: 0;
+  min-width: 0;
+}
+/* skills/no-details rows: let the middle column take the full width */
+.rows__main:last-child {
+  grid-column: 2 / -1;
+}
+
+.rows__title {
+  font-family: var(--sans);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.rows__title a {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 0.25em;
+}
+.rows__title a:hover {
+  text-decoration-color: var(--ink);
+}
+.rows__sub {
+  margin-top: 0.1rem;
+  color: var(--ink-2);
+}
+.rows__note {
+  margin-top: 0.45rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.rows__right {
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+  justify-items: end;
+  text-align: right;
+  padding-top: 0.1rem;
+}
+.rows__right div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.rows__right dt {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.rows__right dd {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+/* skills chips */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.skills span {
+  font-size: 0.95rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .rows__item {
+    grid-template-columns: 1fr;
+  }
+  .rows__left:empty {
+    display: none;
+  }
+  .rows__main:last-child {
+    grid-column: auto;
+  }
+  .rows__right {
+    justify-items: start;
+    text-align: left;
+    margin-top: 0.4rem;
+  }
+}

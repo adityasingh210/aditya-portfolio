@@ -1,0 +1,76 @@
+[
+  {
+    "title": "CompileX",
+    "category": "Online judge",
+    "summary": "A coding-contest judge where every submission is queued through Kafka, run in a sandbox and its verdict streamed back test by test.",
+    "image": "/media/compilex.png",
+    "tint": "sand",
+    "featured": false,
+    "stack": ["Node.js", "Express", "React", "PostgreSQL", "Redis", "Apache Kafka", "Judge0", "WebSockets", "Docker"],
+    "highlights": [
+      "Event-driven submission pipeline on Apache Kafka that decouples ingestion from execution and removes race conditions in evaluation.",
+      "REST APIs for submissions, profiles and leaderboards, with test-case-level verdicts pushed over WebSockets as each test finishes.",
+      "OAuth 2.0 sign-in, JWT access/refresh rotation and role-based access control; containerised with Docker to scale horizontally.",
+      "Judge0 sandboxing runs untrusted code safely across multiple languages with automated test evaluation."
+    ],
+    "metrics": [],
+    "links": [{ "label": "View code", "url": "https://github.com/adityasingh210/CompileX" }]
+  },
+  {
+    "title": "VisionVault",
+    "category": "AI photo platform",
+    "summary": "A photo library you search in plain English, with faces, duplicates and text in images handled automatically.",
+    "image": "/media/visionvault.png",
+    "tint": "slate",
+    "featured": false,
+    "stack": ["React", "Node.js", "Express", "Vector DB", "Embeddings", "LangChain"],
+    "highlights": [
+      "Asynchronous processing queues keep upload and search responsive at 100,000+ images.",
+      "Natural-language semantic search over vector embeddings stored in a vector database.",
+      "Backend AI pipelines for facial recognition, duplicate detection and OCR, so nothing needs manual tagging.",
+      "React interface on Node.js/Express APIs for uploading, browsing and searching."
+    ],
+    "metrics": [{ "value": "100,000+", "label": "images" }],
+    "links": [{ "label": "View code", "url": "https://github.com/adityasingh210/VisionVault" }]
+  },
+  {
+    "title": "OceanXray",
+    "category": "Smart India Hackathon 2026",
+    "summary": "Reconstructs ocean temperature down to 1,000 m from satellite data alone, checked against real Argo float readings.",
+    "image": "/media/oceanxray.png",
+    "tint": "mint",
+    "featured": false,
+    "stack": ["Python", "PyTorch", "CNNs", "Next.js", "TypeScript"],
+    "highlights": [
+      "CNN encoder-decoder in PyTorch learns a 32-D latent embedding from satellite patches to predict temperature at 15 depths down to 1,000 m.",
+      "Validated against independent Argo float observations.",
+      "Python inference service with a Next.js/TypeScript dashboard for live profile visualisation.",
+      "Data pipeline turning satellite and GLORYS inputs into training-ready datasets."
+    ],
+    "metrics": [
+      { "value": "1.403°C", "label": "RMSE" },
+      { "value": "0.972°C", "label": "MAE" }
+    ],
+    "links": []
+  },
+  {
+    "title": "Lyftr LLM Chat",
+    "category": "LLM infrastructure",
+    "summary": "A chatbot that keeps answering when a provider fails, switching API keys on errors and serving repeat questions from cache.",
+    "image": "/media/lyftr.png",
+    "tint": "lilac",
+    "featured": false,
+    "stack": ["React", "FastAPI", "SQLite", "LiteLLM", "Docker"],
+    "highlights": [
+      "LiteLLM across 2+ API keys with automatic failover on 429 and 5xx errors.",
+      "Disk and in-memory response caching; every reply reports whether it came from cache or live inference.",
+      "Endpoints for health, chat and session history, plus a header hook to simulate failures and test failover.",
+      "Whole stack starts locally with one command via Docker and a Makefile."
+    ],
+    "metrics": [],
+    "links": [
+      { "label": "Open live app", "url": "https://lyftr-llm-chat.vercel.app" },
+      { "label": "View code", "url": "https://github.com/adityasingh210/lyftr-llm-chat" }
+    ]
+  }
+]

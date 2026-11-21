@@ -1,0 +1,205 @@
+[
+  {
+    "title": "Education",
+    "intro": "",
+    "show": true,
+    "in_nav": true,
+    "items": [
+      {
+        "period": "2023 – 2027",
+        "title": "B.Tech, Electronics and Communication Engineering",
+        "subtitle": "Netaji Subhas University of Technology, Delhi",
+        "note": "Specialisation in AI/ML. Coursework in data structures and algorithms, DBMS, operating systems, computer networks and OOP.",
+        "details": [
+          {
+            "label": "CGPA",
+            "value": "8.38"
+          }
+        ],
+        "link": ""
+      },
+      {
+        "period": "2022",
+        "title": "Class 12, CBSE",
+        "subtitle": "Ch. Baldev Singh Model School, Delhi",
+        "note": "",
+        "details": [
+          {
+            "label": "Score",
+            "value": "73.5%"
+          }
+        ],
+        "link": ""
+      },
+      {
+        "period": "2020",
+        "title": "Class 10, CBSE",
+        "subtitle": "Ch. Baldev Singh Model School, Delhi",
+        "note": "",
+        "details": [
+          {
+            "label": "Score",
+            "value": "82.1%"
+          }
+        ],
+        "link": ""
+      }
+    ]
+  },
+  {
+    "title": "Leadership",
+    "intro": "Societies and teams I help run at NSUT.",
+    "show": true,
+    "in_nav": false,
+    "items": [
+      {
+        "period": "Current",
+        "title": "Technical Head",
+        "subtitle": "DevComm NSUT, developer community",
+        "note": "",
+        "details": [],
+        "link": ""
+      },
+      {
+        "period": "Nov 2025 – now",
+        "title": "Event Management Head",
+        "subtitle": "Venatus NSUT, gaming society",
+        "note": "Previously on the executive committee, Jan 2024 – Jan 2026.",
+        "details": [],
+        "link": ""
+      },
+      {
+        "period": "Current",
+        "title": "Joint Secretary",
+        "subtitle": "Rotaract Club of NSUT",
+        "note": "",
+        "details": [],
+        "link": ""
+      },
+      {
+        "period": "2025",
+        "title": "Operations Head",
+        "subtitle": "Moksha NSUT, cultural festival",
+        "note": "",
+        "details": [],
+        "link": ""
+      }
+    ]
+  },
+  {
+    "title": "Achievements",
+    "intro": "",
+    "show": true,
+    "in_nav": false,
+    "items": [
+      {
+        "period": "2026",
+        "title": "Built OceanXray for Smart India Hackathon",
+        "subtitle": "Satellite-based ocean temperature reconstruction",
+        "note": "",
+        "details": [],
+        "link": ""
+      },
+      {
+        "period": "Ongoing",
+        "title": "300+ data structures and algorithms problems solved",
+        "subtitle": "",
+        "note": "",
+        "details": [],
+        "link": ""
+      },
+      {
+        "period": "2025",
+        "title": "Table tennis, winner",
+        "subtitle": "East Campus, NSUT",
+        "note": "",
+        "details": [],
+        "link": ""
+      },
+      {
+        "period": "",
+        "title": "Volleyball, finalist",
+        "subtitle": "NSUT",
+        "note": "",
+        "details": [],
+        "link": ""
+      }
+    ]
+  },
+  {
+    "title": "Certifications",
+    "intro": "",
+    "show": true,
+    "in_nav": false,
+    "items": [
+      {
+        "period": "NPTEL",
+        "title": "Psychology of Learning",
+        "subtitle": "",
+        "note": "",
+        "details": [
+          {
+            "label": "Score",
+            "value": "100/100"
+          }
+        ],
+        "link": ""
+      },
+      {
+        "period": "NPTEL",
+        "title": "Conservation Geography",
+        "subtitle": "",
+        "note": "",
+        "details": [
+          {
+            "label": "Score",
+            "value": "99"
+          }
+        ],
+        "link": ""
+      },
+      {
+        "period": "NPTEL",
+        "title": "Design Thinking",
+        "subtitle": "",
+        "note": "",
+        "details": [
+          {
+            "label": "Score",
+            "value": "90"
+          }
+        ],
+        "link": ""
+      },
+      {
+        "period": "NPTEL",
+        "title": "Soft Skills",
+        "subtitle": "",
+        "note": "",
+        "details": [
+          {
+            "label": "Score",
+            "value": "82"
+          }
+        ],
+        "link": ""
+      },
+      {
+        "period": "In progress",
+        "title": "Build AI-powered solutions with Azure Database for PostgreSQL",
+        "subtitle": "Microsoft Applied Skills",
+        "note": "Lab-based: RAG, embeddings and semantic search on PostgreSQL.",
+        "details": [],
+        "link": ""
+      },
+      {
+        "period": "In progress",
+        "title": "AI Skills Passport",
+        "subtitle": "EY × Microsoft",
+        "note": "",
+        "details": [],
+        "link": ""
+      }
+    ]
+  }
+]

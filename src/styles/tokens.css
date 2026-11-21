@@ -1,0 +1,36 @@
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS — the whole look comes from here.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  /* colour */
+  --bg: #ffffff;
+  --ink: #161616;
+  --ink-2: #4d4d4d;
+  --muted: #747474;
+  --line: #e7e7e4;
+  --ok: #2f8f5b;
+
+  /* project card tints (match the "Card colour" options in the CMS) */
+  --tint-sand: #f1eee8;
+  --tint-slate: #eceff3;
+  --tint-mint: #e7f0ec;
+  --tint-lilac: #f3ecf4;
+  --tint-peach: #f7ebe3;
+  --tint-stone: #efefea;
+
+  /* type */
+  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --fs-sm: 0.9375rem;
+  --fs-base: 1.0625rem;
+  --fs-lg: 1.25rem;
+  --fs-title: clamp(2.6rem, 5vw, 3.75rem);
+  --fs-hero: clamp(4rem, 11vw, 9.25rem);
+
+  /* layout */
+  --max: 1296px;
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --space: clamp(4.5rem, 9vw, 7.5rem);
+  --radius: 18px;
+}

@@ -1,0 +1,49 @@
+.section__grid {
+  padding-block: var(--space);
+  /* hairline that lines up with the content, not the page edge */
+  background: linear-gradient(var(--line), var(--line)) center top / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+}
+
+.section__title {
+  font-family: var(--serif);
+  font-size: var(--fs-title);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.section__intro {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  max-width: 34ch;
+}
+
+.section__body {
+  min-width: 0;
+}
+
+/* stacked: heading above content */
+.section--stacked .section__head {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* split: heading left, content right */
+.section--split .section__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 2rem clamp(2rem, 5vw, 5rem);
+}
+.section--split .section__head {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
+@media (max-width: 900px) {
+  .section--split .section__grid {
+    grid-template-columns: 1fr;
+  }
+  .section--split .section__head {
+    position: static;
+  }
+}

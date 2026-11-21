@@ -1,0 +1,7 @@
+[
+  { "group": "Languages", "items": ["Python", "JavaScript", "TypeScript", "C++", "SQL"] },
+  { "group": "Backend", "items": ["Node.js", "Express.js", "FastAPI", "REST APIs", "WebSockets", "Event-driven systems", "JWT", "OAuth 2.0", "RBAC"] },
+  { "group": "Data & infra", "items": ["PostgreSQL", "MongoDB", "Redis", "SQLite", "Prisma ORM", "Apache Kafka", "Docker", "Git"] },
+  { "group": "AI / ML", "items": ["PyTorch", "CNNs", "Vector embeddings", "Vector databases", "LangChain", "LiteLLM"] },
+  { "group": "Frontend", "items": ["React", "Next.js", "Tailwind CSS"] }
+]
